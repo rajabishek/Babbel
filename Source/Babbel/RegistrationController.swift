@@ -107,16 +107,17 @@ class RegistrationController: UIViewController {
     }()
     
     func loginLabelWasClicked() {
-        activeSectionHighLightLeftConstraint?.constant = registerLabel.frame.width + 20
+        activeSectionHighLightLeftConstraint?.constant = 0
         UIView.animateWithDuration(0.35, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .CurveEaseOut, animations: {
             self.view.layoutIfNeeded()
         }, completion: nil)
+        
         self.loginSectionContainer.hidden = false
         self.registerSectionContainer.hidden = true
     }
     
     func registerLabelWasClicked() {
-        activeSectionHighLightLeftConstraint?.constant = 0
+        activeSectionHighLightLeftConstraint?.constant = loginLabel.frame.width + 20
         UIView.animateWithDuration(0.35, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .CurveEaseOut, animations: {
             self.view.layoutIfNeeded()
         }, completion: nil)
@@ -168,15 +169,15 @@ class RegistrationController: UIViewController {
         
         NSLayoutConstraint.activateConstraints(allConstraints)
         
-        loginSectionContainer.hidden = true
+        registerSectionContainer.hidden = true
     }
     
     func getConstraintsForLoginLabel() -> [NSLayoutConstraint] {
         
         var constraints = [NSLayoutConstraint]()
         
-        constraints.append(NSLayoutConstraint(item: loginLabel, attribute: .Left, relatedBy: .Equal, toItem: registerLabel, attribute: .Right, multiplier: 1, constant: 20))
-        constraints.append(NSLayoutConstraint(item: loginLabel, attribute: .Bottom, relatedBy: .Equal, toItem: registrationInputsContainer, attribute: .Top, multiplier: 1, constant: -20))
+        constraints.append(NSLayoutConstraint(item: loginLabel, attribute: .Left, relatedBy: .Equal, toItem: view, attribute: .Left, multiplier: 1, constant: 25))
+        constraints.append(NSLayoutConstraint(item: loginLabel, attribute: .Top, relatedBy: .Equal, toItem: view, attribute: .Top, multiplier: 1, constant: 100))
         
         return constraints
     }
@@ -184,13 +185,14 @@ class RegistrationController: UIViewController {
     func getConstraintsForActiveSectionHighlight() -> [NSLayoutConstraint] {
         
         var constraints = [NSLayoutConstraint]()
-        
-        constraints.append(NSLayoutConstraint(item: activeSectionHighlight, attribute: .Width, relatedBy: .Equal, toItem: registerLabel, attribute: .Width, multiplier: 1, constant: 0))
+        //constraints.append(NSLayoutConstraint(item: activeSectionHighlight, attribute: .Width, relatedBy: .Equal, toItem: loginLabel, attribute: .Width, multiplier: 1, constant: 0))
         constraints.append(NSLayoutConstraint(item: activeSectionHighlight, attribute: .Top, relatedBy: .Equal, toItem: registerLabel, attribute: .Bottom, multiplier: 1, constant: 0))
-        activeSectionHighLightLeftConstraint = NSLayoutConstraint(item: activeSectionHighlight, attribute: .Left, relatedBy: .Equal, toItem: registerLabel, attribute: .Left, multiplier: 1, constant: 0)
+        activeSectionHighLightLeftConstraint = NSLayoutConstraint(item: activeSectionHighlight, attribute: .Left, relatedBy: .Equal, toItem: loginLabel, attribute: .Left, multiplier: 1, constant: 0)
         constraints.append(activeSectionHighLightLeftConstraint!)
         
+        let width = (loginLabel.frame.width + registerLabel.frame.width) / 2
         constraints += NSLayoutConstraint.constraintsWithVisualFormat("V:[v0(2)]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": activeSectionHighlight])
+        constraints += NSLayoutConstraint.constraintsWithVisualFormat("H:[v0(\(width))]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": activeSectionHighlight])
         
         return constraints
     }
@@ -199,8 +201,8 @@ class RegistrationController: UIViewController {
         
         var constraints = [NSLayoutConstraint]()
         
-        constraints.append(NSLayoutConstraint(item: registerLabel, attribute: .Left, relatedBy: .Equal, toItem: view, attribute: .Left, multiplier: 1, constant: 25))
-        constraints.append(NSLayoutConstraint(item: registerLabel, attribute: .Top, relatedBy: .Equal, toItem: view, attribute: .Top, multiplier: 1, constant: 100))
+        constraints.append(NSLayoutConstraint(item: registerLabel, attribute: .Left, relatedBy: .Equal, toItem: loginLabel, attribute: .Right, multiplier: 1, constant: 20))
+        constraints.append(NSLayoutConstraint(item: registerLabel, attribute: .Bottom, relatedBy: .Equal, toItem: loginLabel, attribute: .Bottom, multiplier: 1, constant: 0))
         
         return constraints
     }
