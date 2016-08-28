@@ -39,7 +39,7 @@ class RegistrationController: UIViewController {
     let loginButton: UIButton = {
         let button = UIButton(type: .System)
         button.backgroundColor = Color.baseColor
-        button.setTitle("Login", forState: .Normal)
+        button.setTitle("Sign In", forState: .Normal)
         button.setTitleColor(UIColor.whiteColor(), forState: .Normal)
         button.titleLabel?.font = UIFont(name: "FiraSans-Medium", size: 13) ?? UIFont.boldSystemFontOfSize(13)
         button.layer.cornerRadius = 3
@@ -63,7 +63,7 @@ class RegistrationController: UIViewController {
         let button = UIButton(type: .System)
         button.backgroundColor = .clearColor()
         button.setTitle("Register", forState: .Normal)
-        button.setTitleColor(Color.wildSand, forState: .Normal)
+        button.setTitleColor(Color.mediumGray, forState: .Normal)
         button.titleLabel?.font = UIFont(name: "FiraSans-Regular", size: 13) ?? UIFont.boldSystemFontOfSize(13)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.sizeToFit()

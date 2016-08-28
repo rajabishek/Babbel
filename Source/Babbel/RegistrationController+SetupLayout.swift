@@ -14,8 +14,9 @@ extension RegistrationController {
         activeSectionHighLightLeftConstraint?.constant = 0
         UIView.animateWithDuration(0.35, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .CurveEaseOut, animations: {
             self.view.layoutIfNeeded()
-            }, completion: nil)
-        
+        }, completion: nil)
+        self.loginLabel.setTitleColor(Color.wildSand, forState: .Normal)
+        self.registerLabel.setTitleColor(Color.mediumGray, forState: .Normal)
         self.loginSectionContainer.hidden = false
         self.registerSectionContainer.hidden = true
     }
@@ -24,7 +25,9 @@ extension RegistrationController {
         activeSectionHighLightLeftConstraint?.constant = loginLabel.frame.width + 20
         UIView.animateWithDuration(0.35, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .CurveEaseOut, animations: {
             self.view.layoutIfNeeded()
-            }, completion: nil)
+        }, completion: nil)
+        self.loginLabel.setTitleColor(Color.mediumGray, forState: .Normal)
+        self.registerLabel.setTitleColor(Color.wildSand, forState: .Normal)
         self.loginSectionContainer.hidden = true
         self.registerSectionContainer.hidden = false
     }
