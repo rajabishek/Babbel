@@ -110,7 +110,7 @@ class RegistrationController: UIViewController {
         return line
     }()
     
-    let emailIconImageView: UIImageView = {
+    let loginEmailIconImageView: UIImageView = {
         let imageview = UIImageView()
         imageview.image = UIImage(named: "email-icon")?.imageWithRenderingMode(.AlwaysTemplate)
         imageview.tintColor = UIColor.lightGrayColor()
@@ -119,7 +119,7 @@ class RegistrationController: UIViewController {
         return imageview
     }()
     
-    let passwordIconImageView: UIImageView = {
+    let loginPasswordIconImageView: UIImageView = {
         let imageview = UIImageView()
         imageview.image = UIImage(named: "password-icon")?.imageWithRenderingMode(.AlwaysTemplate)
         imageview.tintColor = UIColor.lightGrayColor()
@@ -129,6 +129,34 @@ class RegistrationController: UIViewController {
     }()
     
     let loginPasswordTextField: UITextField = {
+        let textfield = UITextField()
+        textfield.translatesAutoresizingMaskIntoConstraints = false
+        textfield.placeholder = "Password"
+        textfield.textColor = UIColor.darkGrayColor()
+        textfield.font = UIFont(name: "FiraSans-Regular", size: 12) ?? UIFont.boldSystemFontOfSize(12)
+        textfield.secureTextEntry = true
+        return textfield
+    }()
+    
+    let registerNameTextField: UITextField = {
+        let textfield = UITextField()
+        textfield.translatesAutoresizingMaskIntoConstraints = false
+        textfield.placeholder = "Name"
+        textfield.textColor = UIColor.darkGrayColor()
+        textfield.font = UIFont(name: "FiraSans-Regular", size: 12) ?? UIFont.boldSystemFontOfSize(12)
+        return textfield
+    }()
+    
+    let registerEmailTextField: UITextField = {
+        let textfield = UITextField()
+        textfield.translatesAutoresizingMaskIntoConstraints = false
+        textfield.placeholder = "Email Address"
+        textfield.textColor = UIColor.darkGrayColor()
+        textfield.font = UIFont(name: "FiraSans-Regular", size: 12) ?? UIFont.boldSystemFontOfSize(12)
+        return textfield
+    }()
+    
+    let registerPasswordTextField: UITextField = {
         let textfield = UITextField()
         textfield.translatesAutoresizingMaskIntoConstraints = false
         textfield.placeholder = "Password"
