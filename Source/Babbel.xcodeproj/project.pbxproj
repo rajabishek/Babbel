@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CC5123BE1D72B6F600C8CC7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5123BD1D72B6F600C8CC7A /* AppDelegate.swift */; };
-		CC5123C01D72B6F600C8CC7A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5123BF1D72B6F600C8CC7A /* ViewController.swift */; };
+		CC5123C01D72B6F600C8CC7A /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5123BF1D72B6F600C8CC7A /* HomeController.swift */; };
 		CC5123C61D72B6F600C8CC7A /* Babbel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CC5123C41D72B6F600C8CC7A /* Babbel.xcdatamodeld */; };
 		CC5123C81D72B6F600C8CC7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC5123C71D72B6F600C8CC7A /* Assets.xcassets */; };
 		CC5123CB1D72B6F600C8CC7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC5123C91D72B6F600C8CC7A /* LaunchScreen.storyboard */; };
@@ -17,7 +17,7 @@
 /* Begin PBXFileReference section */
 		CC5123BA1D72B6F600C8CC7A /* Babbel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Babbel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC5123BD1D72B6F600C8CC7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CC5123BF1D72B6F600C8CC7A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CC5123BF1D72B6F600C8CC7A /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		CC5123C51D72B6F600C8CC7A /* Babbel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Babbel.xcdatamodel; sourceTree = "<group>"; };
 		CC5123C71D72B6F600C8CC7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC5123CA1D72B6F600C8CC7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -35,6 +35,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CC3F388F1D72DB68009E4625 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CC5123BF1D72B6F600C8CC7A /* HomeController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		CC3F38901D72DB92009E4625 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CC5123BD1D72B6F600C8CC7A /* AppDelegate.swift */,
+				CC5123C71D72B6F600C8CC7A /* Assets.xcassets */,
+				CC5123CC1D72B6F600C8CC7A /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CC3F38911D72DB9D009E4625 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CC5123C41D72B6F600C8CC7A /* Babbel.xcdatamodeld */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		CC3F38921D72DBB6009E4625 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CC5123C91D72B6F600C8CC7A /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		CC5123B11D72B6F600C8CC7A = {
 			isa = PBXGroup;
 			children = (
@@ -54,12 +88,10 @@
 		CC5123BC1D72B6F600C8CC7A /* Babbel */ = {
 			isa = PBXGroup;
 			children = (
-				CC5123BD1D72B6F600C8CC7A /* AppDelegate.swift */,
-				CC5123BF1D72B6F600C8CC7A /* ViewController.swift */,
-				CC5123C71D72B6F600C8CC7A /* Assets.xcassets */,
-				CC5123C91D72B6F600C8CC7A /* LaunchScreen.storyboard */,
-				CC5123CC1D72B6F600C8CC7A /* Info.plist */,
-				CC5123C41D72B6F600C8CC7A /* Babbel.xcdatamodeld */,
+				CC3F38901D72DB92009E4625 /* Supporting Files */,
+				CC3F38911D72DB9D009E4625 /* Model */,
+				CC3F38921D72DBB6009E4625 /* View */,
+				CC3F388F1D72DB68009E4625 /* Controller */,
 			);
 			path = Babbel;
 			sourceTree = "<group>";
@@ -134,7 +166,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC5123C01D72B6F600C8CC7A /* ViewController.swift in Sources */,
+				CC5123C01D72B6F600C8CC7A /* HomeController.swift in Sources */,
 				CC5123BE1D72B6F600C8CC7A /* AppDelegate.swift in Sources */,
 				CC5123C61D72B6F600C8CC7A /* Babbel.xcdatamodeld in Sources */,
 			);
