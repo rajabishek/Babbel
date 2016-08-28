@@ -257,7 +257,7 @@ extension RegistrationController {
         
         var constraints = [NSLayoutConstraint]()
         
-        constraints.append(NSLayoutConstraint(item: loginLabel, attribute: .Left, relatedBy: .Equal, toItem: view, attribute: .Left, multiplier: 1, constant: 25))
+        constraints.append(NSLayoutConstraint(item: loginLabel, attribute: .Left, relatedBy: .Equal, toItem: view, attribute: .Left, multiplier: 1, constant: 35))
         constraints.append(NSLayoutConstraint(item: loginLabel, attribute: .Top, relatedBy: .Equal, toItem: bannerLabel, attribute: .Bottom, multiplier: 1, constant: 10))
         
         return constraints
@@ -293,7 +293,7 @@ extension RegistrationController {
         var constraints = [NSLayoutConstraint]()
         
         constraints += NSLayoutConstraint.constraintsWithVisualFormat("H:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": registrationInputsContainer])
-        constraints += NSLayoutConstraint.constraintsWithVisualFormat("V:[v0(108)]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": registrationInputsContainer])
+        constraints += NSLayoutConstraint.constraintsWithVisualFormat("V:[v0(110)]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": registrationInputsContainer])
         
         constraints.append(NSLayoutConstraint(item: registrationInputsContainer, attribute: .Top, relatedBy: .Equal, toItem: registerSectionContainer, attribute: .Top, multiplier: 1, constant: 0))
         
@@ -351,8 +351,8 @@ extension RegistrationController {
         
         var constraints = [NSLayoutConstraint]()
         
-        constraints += NSLayoutConstraint.constraintsWithVisualFormat("H:|-25-[v0]-25-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": loginSectionContainer])
-        let contentsHeight = 72 + 20 + 36 + 10 + forgotPasswordButton.frame.height
+        constraints += NSLayoutConstraint.constraintsWithVisualFormat("H:|-35-[v0]-35-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": loginSectionContainer])
+        let contentsHeight = 73 + 20 + 36 + 10 + forgotPasswordButton.frame.height
         constraints += NSLayoutConstraint.constraintsWithVisualFormat("V:[v0(\(contentsHeight))]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": loginSectionContainer])
         constraints.append(NSLayoutConstraint(item: loginSectionContainer, attribute: .Top, relatedBy: .Equal, toItem: registerLabel, attribute: .Bottom, multiplier: 1, constant: 20))
         
@@ -363,8 +363,8 @@ extension RegistrationController {
         
         var constraints = [NSLayoutConstraint]()
         
-        constraints += NSLayoutConstraint.constraintsWithVisualFormat("H:|-25-[v0]-25-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": registerSectionContainer])
-        let contentsHeight = 108 + 20 + 36
+        constraints += NSLayoutConstraint.constraintsWithVisualFormat("H:|-35-[v0]-35-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": registerSectionContainer])
+        let contentsHeight = 110 + 20 + 36
         constraints += NSLayoutConstraint.constraintsWithVisualFormat("V:[v0(\(contentsHeight))]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": registerSectionContainer])
         constraints.append(NSLayoutConstraint(item: registerSectionContainer, attribute: .Top, relatedBy: .Equal, toItem: registerLabel, attribute: .Bottom, multiplier: 1, constant: 20))
         
