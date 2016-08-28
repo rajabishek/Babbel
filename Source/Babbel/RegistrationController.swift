@@ -17,7 +17,7 @@ class RegistrationController: UIViewController {
         return container
     }()
     
-    let registerButton: UIButton = {
+    lazy var registerButton: UIButton = {
         let button = UIButton(type: .System)
         button.backgroundColor = Color.baseColor
         button.setTitle("Register", forState: .Normal)
@@ -26,6 +26,7 @@ class RegistrationController: UIViewController {
         button.layer.cornerRadius = 3
         button.layer.masksToBounds = true
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(registerButtonWasClicked), forControlEvents: .TouchUpInside)
         return button
     }()
     
@@ -36,7 +37,7 @@ class RegistrationController: UIViewController {
         return container
     }()
     
-    let loginButton: UIButton = {
+    lazy var loginButton: UIButton = {
         let button = UIButton(type: .System)
         button.backgroundColor = Color.baseColor
         button.setTitle("Sign In", forState: .Normal)
@@ -45,6 +46,7 @@ class RegistrationController: UIViewController {
         button.layer.cornerRadius = 3
         button.layer.masksToBounds = true
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(loginButtonWasClicked), forControlEvents: .TouchUpInside)
         return button
     }()
     
@@ -237,5 +239,13 @@ class RegistrationController: UIViewController {
         
         view.backgroundColor = Color.charade
         setupLayout()
+    }
+    
+    func registerButtonWasClicked() {
+        print("Start the registration process")
+    }
+    
+    func loginButtonWasClicked() {
+        print("Start the login process")
     }
 }
