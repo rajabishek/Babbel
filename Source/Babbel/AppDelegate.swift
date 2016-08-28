@@ -19,8 +19,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         window?.backgroundColor = UIColor.whiteColor()
-        window?.rootViewController = UINavigationController(rootViewController: HomeController())
+        let navigationController = UINavigationController(rootViewController: HomeController())
+        window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
+        
+        navigationController.navigationBar.barTintColor = Color.baseColor
+        navigationController.navigationBar.translucent = false
+        application.statusBarStyle = .LightContent
         
         return true
     }

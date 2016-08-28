@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC3917251D72E555005393BA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3917241D72E555005393BA /* Constants.swift */; };
 		CC5123BE1D72B6F600C8CC7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5123BD1D72B6F600C8CC7A /* AppDelegate.swift */; };
 		CC5123C01D72B6F600C8CC7A /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5123BF1D72B6F600C8CC7A /* HomeController.swift */; };
 		CC5123C61D72B6F600C8CC7A /* Babbel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CC5123C41D72B6F600C8CC7A /* Babbel.xcdatamodeld */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CC3917241D72E555005393BA /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CC5123BA1D72B6F600C8CC7A /* Babbel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Babbel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC5123BD1D72B6F600C8CC7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC5123BF1D72B6F600C8CC7A /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -35,6 +37,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CC3917231D72E547005393BA /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CC3917241D72E555005393BA /* Constants.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
 		CC3F388F1D72DB68009E4625 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +98,7 @@
 		CC5123BC1D72B6F600C8CC7A /* Babbel */ = {
 			isa = PBXGroup;
 			children = (
+				CC3917231D72E547005393BA /* Helpers */,
 				CC3F38901D72DB92009E4625 /* Supporting Files */,
 				CC3F38911D72DB9D009E4625 /* Model */,
 				CC3F38921D72DBB6009E4625 /* View */,
@@ -169,6 +180,7 @@
 				CC5123C01D72B6F600C8CC7A /* HomeController.swift in Sources */,
 				CC5123BE1D72B6F600C8CC7A /* AppDelegate.swift in Sources */,
 				CC5123C61D72B6F600C8CC7A /* Babbel.xcdatamodeld in Sources */,
+				CC3917251D72E555005393BA /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
