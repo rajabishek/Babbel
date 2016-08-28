@@ -17,6 +17,7 @@
 		CC3917381D72E68B005393BA /* FiraSans-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CC39172F1D72E68B005393BA /* FiraSans-MediumItalic.ttf */; };
 		CC3917391D72E68B005393BA /* FiraSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CC3917301D72E68B005393BA /* FiraSans-Regular.ttf */; };
 		CC39173A1D72E68B005393BA /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = CC3917311D72E68B005393BA /* OFL.txt */; };
+		CC39173C1D72EBBA005393BA /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC39173B1D72EBBA005393BA /* RegistrationController.swift */; };
 		CC5123BE1D72B6F600C8CC7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5123BD1D72B6F600C8CC7A /* AppDelegate.swift */; };
 		CC5123C01D72B6F600C8CC7A /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5123BF1D72B6F600C8CC7A /* HomeController.swift */; };
 		CC5123C61D72B6F600C8CC7A /* Babbel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CC5123C41D72B6F600C8CC7A /* Babbel.xcdatamodeld */; };
@@ -35,6 +36,7 @@
 		CC39172F1D72E68B005393BA /* FiraSans-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FiraSans-MediumItalic.ttf"; sourceTree = "<group>"; };
 		CC3917301D72E68B005393BA /* FiraSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FiraSans-Regular.ttf"; sourceTree = "<group>"; };
 		CC3917311D72E68B005393BA /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		CC39173B1D72EBBA005393BA /* RegistrationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		CC5123BA1D72B6F600C8CC7A /* Babbel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Babbel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC5123BD1D72B6F600C8CC7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC5123BF1D72B6F600C8CC7A /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				CC5123BF1D72B6F600C8CC7A /* HomeController.swift */,
+				CC39173B1D72EBBA005393BA /* RegistrationController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 				CC5123C01D72B6F600C8CC7A /* HomeController.swift in Sources */,
 				CC5123BE1D72B6F600C8CC7A /* AppDelegate.swift in Sources */,
 				CC5123C61D72B6F600C8CC7A /* Babbel.xcdatamodeld in Sources */,
+				CC39173C1D72EBBA005393BA /* RegistrationController.swift in Sources */,
 				CC3917251D72E555005393BA /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

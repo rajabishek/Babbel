@@ -33,7 +33,23 @@ class HomeController: UITableViewController {
     
     func setupNavigationBar() {
         
+        //Set the title for the navigation bar
         navigationItem.titleView = getTitleViewForNavigationBar("Raj Abishek")
+        
+        //Status bar must be a light content
+        navigationController?.navigationBar.barStyle = .Black;
+        
+        //Set the left bar button item for the navigation bar
+        let logoutButton = UIBarButtonItem(title: "Logout", style: .Plain, target: self, action: #selector(handleLogout))
+        let textAttributes = [NSFontAttributeName: UIFont(name: "FiraSans-Medium", size: 14) ?? UIFont.systemFontOfSize(14), NSForegroundColorAttributeName: UIColor.whiteColor()]
+        logoutButton.setTitleTextAttributes(textAttributes, forState: UIControlState.Normal)
+        
+        navigationItem.leftBarButtonItem = logoutButton
+    }
+    
+    func handleLogout() {
+        let registrationController = RegistrationController()
+        presentViewController(registrationController, animated: true, completion: nil)
     }
 }
 

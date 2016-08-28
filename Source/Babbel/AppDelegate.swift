@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         navigationController.navigationBar.barTintColor = Color.baseColor
         navigationController.navigationBar.translucent = false
-        application.statusBarStyle = .LightContent
+        navigationController.navigationBar.tintColor = UIColor.whiteColor()
         
         return true
     }
