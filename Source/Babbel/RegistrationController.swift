@@ -56,7 +56,7 @@ class RegistrationController: UIViewController {
         let button = UIButton(type: .System)
         button.backgroundColor = .clearColor()
         button.setTitle("Forgot Password?", forState: .Normal)
-        button.setTitleColor(UIColor.darkGrayColor(), forState: .Normal)
+        button.setTitleColor(Color.darkGray, forState: .Normal)
         button.titleLabel?.font = UIFont(name: "FiraSans-Regular", size: 12) ?? UIFont.boldSystemFontOfSize(12)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.sizeToFit()
@@ -67,7 +67,7 @@ class RegistrationController: UIViewController {
         let button = UIButton(type: .System)
         button.backgroundColor = .clearColor()
         button.setTitle("Register", forState: .Normal)
-        button.setTitleColor(UIColor.darkGrayColor(), forState: .Normal)
+        button.setTitleColor(Color.darkGray, forState: .Normal)
         button.titleLabel?.font = UIFont(name: "FiraSans-Regular", size: 13) ?? UIFont.boldSystemFontOfSize(13)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.sizeToFit()
@@ -86,7 +86,7 @@ class RegistrationController: UIViewController {
         let button = UIButton(type: .System)
         button.backgroundColor = .clearColor()
         button.setTitle("Sign In", forState: .Normal)
-        button.setTitleColor(UIColor.darkGrayColor(), forState: .Normal)
+        button.setTitleColor(Color.darkGray, forState: .Normal)
         button.titleLabel?.font = UIFont(name: "FiraSans-Regular", size: 13) ?? UIFont.boldSystemFontOfSize(13)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.sizeToFit()
@@ -98,14 +98,14 @@ class RegistrationController: UIViewController {
         let textfield = UITextField()
         textfield.translatesAutoresizingMaskIntoConstraints = false
         textfield.placeholder = "Email Address"
-        textfield.textColor = UIColor.darkGrayColor()
+        textfield.textColor = Color.darkGray
         textfield.font = UIFont(name: "FiraSans-Regular", size: 12) ?? UIFont.boldSystemFontOfSize(12)
         return textfield
     }()
     
     let loginEmailPasswordLine: UIView = {
         let line = UIView()
-        line.backgroundColor = UIColor.lightGrayColor()
+        line.backgroundColor = Color.lightGray
         line.translatesAutoresizingMaskIntoConstraints = false
         return line
     }()
@@ -113,7 +113,7 @@ class RegistrationController: UIViewController {
     let loginEmailIconImageView: UIImageView = {
         let imageview = UIImageView()
         imageview.image = UIImage(named: "email-icon")?.imageWithRenderingMode(.AlwaysTemplate)
-        imageview.tintColor = UIColor.lightGrayColor()
+        imageview.tintColor = Color.mediumGray
         imageview.translatesAutoresizingMaskIntoConstraints = false
         imageview.contentMode = .ScaleAspectFill
         return imageview
@@ -122,7 +122,7 @@ class RegistrationController: UIViewController {
     let loginPasswordIconImageView: UIImageView = {
         let imageview = UIImageView()
         imageview.image = UIImage(named: "password-icon")?.imageWithRenderingMode(.AlwaysTemplate)
-        imageview.tintColor = UIColor.lightGrayColor()
+        imageview.tintColor = Color.mediumGray
         imageview.translatesAutoresizingMaskIntoConstraints = false
         imageview.contentMode = .ScaleAspectFill
         return imageview
@@ -132,7 +132,7 @@ class RegistrationController: UIViewController {
         let textfield = UITextField()
         textfield.translatesAutoresizingMaskIntoConstraints = false
         textfield.placeholder = "Password"
-        textfield.textColor = UIColor.darkGrayColor()
+        textfield.textColor = Color.darkGray
         textfield.font = UIFont(name: "FiraSans-Regular", size: 12) ?? UIFont.boldSystemFontOfSize(12)
         textfield.secureTextEntry = true
         return textfield
@@ -142,7 +142,7 @@ class RegistrationController: UIViewController {
         let textfield = UITextField()
         textfield.translatesAutoresizingMaskIntoConstraints = false
         textfield.placeholder = "Name"
-        textfield.textColor = UIColor.darkGrayColor()
+        textfield.textColor = Color.darkGray
         textfield.font = UIFont(name: "FiraSans-Regular", size: 12) ?? UIFont.boldSystemFontOfSize(12)
         return textfield
     }()
@@ -151,7 +151,7 @@ class RegistrationController: UIViewController {
         let textfield = UITextField()
         textfield.translatesAutoresizingMaskIntoConstraints = false
         textfield.placeholder = "Email Address"
-        textfield.textColor = UIColor.darkGrayColor()
+        textfield.textColor = Color.darkGray
         textfield.font = UIFont(name: "FiraSans-Regular", size: 12) ?? UIFont.boldSystemFontOfSize(12)
         return textfield
     }()
@@ -160,7 +160,7 @@ class RegistrationController: UIViewController {
         let textfield = UITextField()
         textfield.translatesAutoresizingMaskIntoConstraints = false
         textfield.placeholder = "Password"
-        textfield.textColor = UIColor.darkGrayColor()
+        textfield.textColor = Color.darkGray
         textfield.font = UIFont(name: "FiraSans-Regular", size: 12) ?? UIFont.boldSystemFontOfSize(12)
         textfield.secureTextEntry = true
         return textfield
@@ -168,14 +168,14 @@ class RegistrationController: UIViewController {
     
     let registerNameEmailLine: UIView = {
         let line = UIView()
-        line.backgroundColor = UIColor.lightGrayColor()
+        line.backgroundColor = Color.lightGray
         line.translatesAutoresizingMaskIntoConstraints = false
         return line
     }()
     
     let registerEmailPasswordLine: UIView = {
         let line = UIView()
-        line.backgroundColor = UIColor.lightGrayColor()
+        line.backgroundColor = Color.lightGray
         line.translatesAutoresizingMaskIntoConstraints = false
         return line
     }()
@@ -183,7 +183,7 @@ class RegistrationController: UIViewController {
     let registerNameIconImageView: UIImageView = {
         let imageview = UIImageView()
         imageview.image = UIImage(named: "name-icon")?.imageWithRenderingMode(.AlwaysTemplate)
-        imageview.tintColor = UIColor.lightGrayColor()
+        imageview.tintColor = Color.mediumGray
         imageview.translatesAutoresizingMaskIntoConstraints = false
         imageview.contentMode = .ScaleAspectFill
         return imageview
@@ -192,7 +192,7 @@ class RegistrationController: UIViewController {
     let registerEmailIconImageView: UIImageView = {
         let imageview = UIImageView()
         imageview.image = UIImage(named: "email-icon")?.imageWithRenderingMode(.AlwaysTemplate)
-        imageview.tintColor = UIColor.lightGrayColor()
+        imageview.tintColor = Color.mediumGray
         imageview.translatesAutoresizingMaskIntoConstraints = false
         imageview.contentMode = .ScaleAspectFill
         return imageview
@@ -201,7 +201,7 @@ class RegistrationController: UIViewController {
     let registerPasswordIconImageView: UIImageView = {
         let imageview = UIImageView()
         imageview.image = UIImage(named: "password-icon")?.imageWithRenderingMode(.AlwaysTemplate)
-        imageview.tintColor = UIColor.lightGrayColor()
+        imageview.tintColor = Color.mediumGray
         imageview.translatesAutoresizingMaskIntoConstraints = false
         imageview.contentMode = .ScaleAspectFill
         return imageview
@@ -222,7 +222,7 @@ class RegistrationController: UIViewController {
     let bannerLabel: UILabel = {
         let heading = UILabel()
         heading.translatesAutoresizingMaskIntoConstraints = false
-        heading.textColor = UIColor.darkGrayColor()
+        heading.textColor = Color.darkGray
         heading.text = "Know Your Faculty"
         heading.textAlignment = .Center
         heading.font = UIFont(name: "FiraSans-Medium", size: 24) ?? UIFont.boldSystemFontOfSize(24)
