@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 import CoreData
 
 @UIApplicationMain
@@ -26,6 +27,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navigationController.navigationBar.barTintColor = Color.baseColor
         navigationController.navigationBar.translucent = false
         navigationController.navigationBar.tintColor = UIColor.whiteColor()
+        
+        FIRApp.configure()
         
         return true
     }
