@@ -94,13 +94,38 @@ class RegistrationController: UIViewController {
         return button
     }()
     
-    let loginNameTextField: UITextField = {
+    let loginEmailTextField: UITextField = {
         let textfield = UITextField()
         textfield.translatesAutoresizingMaskIntoConstraints = false
         textfield.placeholder = "Email Address"
         textfield.textColor = UIColor.darkGrayColor()
         textfield.font = UIFont(name: "FiraSans-Regular", size: 12) ?? UIFont.boldSystemFontOfSize(12)
         return textfield
+    }()
+    
+    let loginEmailPasswordLine: UIView = {
+        let line = UIView()
+        line.backgroundColor = UIColor.lightGrayColor()
+        line.translatesAutoresizingMaskIntoConstraints = false
+        return line
+    }()
+    
+    let emailIconImageView: UIImageView = {
+        let imageview = UIImageView()
+        imageview.image = UIImage(named: "email-icon")?.imageWithRenderingMode(.AlwaysTemplate)
+        imageview.tintColor = UIColor.lightGrayColor()
+        imageview.translatesAutoresizingMaskIntoConstraints = false
+        imageview.contentMode = .ScaleAspectFill
+        return imageview
+    }()
+    
+    let passwordIconImageView: UIImageView = {
+        let imageview = UIImageView()
+        imageview.image = UIImage(named: "password-icon")?.imageWithRenderingMode(.AlwaysTemplate)
+        imageview.tintColor = UIColor.lightGrayColor()
+        imageview.translatesAutoresizingMaskIntoConstraints = false
+        imageview.contentMode = .ScaleAspectFill
+        return imageview
     }()
     
     let loginPasswordTextField: UITextField = {

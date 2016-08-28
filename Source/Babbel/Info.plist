@@ -4,6 +4,11 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
+		<string>Muli-Bold.ttf</string>
+		<string>Muli-ExtraLight.ttf</string>
+		<string>Muli-Light.ttf</string>
+		<string>Muli-SemiBold.ttf</string>
+		<string>Muli.ttf</string>
 		<string>FiraSans-Bold.ttf</string>
 		<string>FiraSans-BoldItalic.ttf</string>
 		<string>FiraSans-Italic.ttf</string>
