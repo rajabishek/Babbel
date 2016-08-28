@@ -31,6 +31,7 @@ extension RegistrationController {
     
     func setupLayout() {
         
+        view.addSubview(bannerLabel)
         view.addSubview(registerLabel)
         view.addSubview(activeSectionHighlight)
         view.addSubview(loginLabel)
@@ -52,6 +53,7 @@ extension RegistrationController {
         
         var allConstraints = [NSLayoutConstraint]()
         
+        allConstraints += getConstraintsForBannerLabel()
         allConstraints += getConstraintsForRegisterSectionContainer()
         allConstraints += getConstraintsForRegistrationInputsContainer()
         allConstraints += getConstraintsForRegistrationButton()
@@ -133,12 +135,23 @@ extension RegistrationController {
         return constraints
     }
     
+    func getConstraintsForBannerLabel() -> [NSLayoutConstraint] {
+        
+        var constraints = [NSLayoutConstraint]()
+        
+        constraints.append(NSLayoutConstraint(item: bannerLabel, attribute: .CenterX, relatedBy: .Equal, toItem: view, attribute: .CenterX, multiplier: 1, constant: 0))
+        constraints.append(NSLayoutConstraint(item: bannerLabel, attribute: .Top, relatedBy: .Equal, toItem: view, attribute: .Top, multiplier: 1, constant: 50))
+        
+        return constraints
+    }
+
+    
     func getConstraintsForLoginLabel() -> [NSLayoutConstraint] {
         
         var constraints = [NSLayoutConstraint]()
         
         constraints.append(NSLayoutConstraint(item: loginLabel, attribute: .Left, relatedBy: .Equal, toItem: view, attribute: .Left, multiplier: 1, constant: 25))
-        constraints.append(NSLayoutConstraint(item: loginLabel, attribute: .Top, relatedBy: .Equal, toItem: view, attribute: .Top, multiplier: 1, constant: 100))
+        constraints.append(NSLayoutConstraint(item: loginLabel, attribute: .Top, relatedBy: .Equal, toItem: bannerLabel, attribute: .Bottom, multiplier: 1, constant: 50))
         
         return constraints
     }

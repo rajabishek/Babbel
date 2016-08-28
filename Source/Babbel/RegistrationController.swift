@@ -150,6 +150,17 @@ class RegistrationController: UIViewController {
         return container
     }()
     
+    let bannerLabel: UILabel = {
+        let heading = UILabel()
+        heading.translatesAutoresizingMaskIntoConstraints = false
+        heading.textColor = UIColor.darkGrayColor()
+        heading.text = "Know Your Faculty"
+        heading.textAlignment = .Center
+        heading.font = UIFont(name: "FiraSans-Medium", size: 24) ?? UIFont.boldSystemFontOfSize(24)
+        heading.sizeToFit()
+        return heading
+    }()
+    
     var activeSectionHighLightLeftConstraint: NSLayoutConstraint?
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {

@@ -19,12 +19,6 @@
 		CC39173A1D72E68B005393BA /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = CC3917311D72E68B005393BA /* OFL.txt */; };
 		CC39173C1D72EBBA005393BA /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC39173B1D72EBBA005393BA /* RegistrationController.swift */; };
 		CC39173E1D7316F5005393BA /* RegistrationController+SetupLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC39173D1D7316F5005393BA /* RegistrationController+SetupLayout.swift */; };
-		CC3917461D7327FD005393BA /* Muli-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CC3917401D7327FD005393BA /* Muli-Bold.ttf */; };
-		CC3917471D7327FD005393BA /* Muli-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CC3917411D7327FD005393BA /* Muli-ExtraLight.ttf */; };
-		CC3917481D7327FD005393BA /* Muli-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CC3917421D7327FD005393BA /* Muli-Light.ttf */; };
-		CC3917491D7327FD005393BA /* Muli-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CC3917431D7327FD005393BA /* Muli-SemiBold.ttf */; };
-		CC39174A1D7327FD005393BA /* Muli.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CC3917441D7327FD005393BA /* Muli.ttf */; };
-		CC39174B1D7327FD005393BA /* SIL Open Font License.txt in Resources */ = {isa = PBXBuildFile; fileRef = CC3917451D7327FD005393BA /* SIL Open Font License.txt */; };
 		CC5123BE1D72B6F600C8CC7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5123BD1D72B6F600C8CC7A /* AppDelegate.swift */; };
 		CC5123C01D72B6F600C8CC7A /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5123BF1D72B6F600C8CC7A /* HomeController.swift */; };
 		CC5123C61D72B6F600C8CC7A /* Babbel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CC5123C41D72B6F600C8CC7A /* Babbel.xcdatamodeld */; };
@@ -45,12 +39,6 @@
 		CC3917311D72E68B005393BA /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		CC39173B1D72EBBA005393BA /* RegistrationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		CC39173D1D7316F5005393BA /* RegistrationController+SetupLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RegistrationController+SetupLayout.swift"; sourceTree = "<group>"; };
-		CC3917401D7327FD005393BA /* Muli-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-Bold.ttf"; sourceTree = "<group>"; };
-		CC3917411D7327FD005393BA /* Muli-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-ExtraLight.ttf"; sourceTree = "<group>"; };
-		CC3917421D7327FD005393BA /* Muli-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-Light.ttf"; sourceTree = "<group>"; };
-		CC3917431D7327FD005393BA /* Muli-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-SemiBold.ttf"; sourceTree = "<group>"; };
-		CC3917441D7327FD005393BA /* Muli.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Muli.ttf; sourceTree = "<group>"; };
-		CC3917451D7327FD005393BA /* SIL Open Font License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SIL Open Font License.txt"; sourceTree = "<group>"; };
 		CC5123BA1D72B6F600C8CC7A /* Babbel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Babbel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC5123BD1D72B6F600C8CC7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC5123BF1D72B6F600C8CC7A /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -91,7 +79,6 @@
 		CC3917271D72E676005393BA /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				CC39173F1D7327FD005393BA /* Muli */,
 				CC3917281D72E68B005393BA /* Fira Sans */,
 			);
 			name = Fonts;
@@ -111,19 +98,6 @@
 				CC3917311D72E68B005393BA /* OFL.txt */,
 			);
 			path = "Fira Sans";
-			sourceTree = "<group>";
-		};
-		CC39173F1D7327FD005393BA /* Muli */ = {
-			isa = PBXGroup;
-			children = (
-				CC3917401D7327FD005393BA /* Muli-Bold.ttf */,
-				CC3917411D7327FD005393BA /* Muli-ExtraLight.ttf */,
-				CC3917421D7327FD005393BA /* Muli-Light.ttf */,
-				CC3917431D7327FD005393BA /* Muli-SemiBold.ttf */,
-				CC3917441D7327FD005393BA /* Muli.ttf */,
-				CC3917451D7327FD005393BA /* SIL Open Font License.txt */,
-			);
-			path = Muli;
 			sourceTree = "<group>";
 		};
 		CC3F388F1D72DB68009E4625 /* Controller */ = {
@@ -252,15 +226,9 @@
 				CC39173A1D72E68B005393BA /* OFL.txt in Resources */,
 				CC3917321D72E68B005393BA /* FiraSans-Bold.ttf in Resources */,
 				CC5123CB1D72B6F600C8CC7A /* LaunchScreen.storyboard in Resources */,
-				CC3917471D7327FD005393BA /* Muli-ExtraLight.ttf in Resources */,
-				CC39174B1D7327FD005393BA /* SIL Open Font License.txt in Resources */,
 				CC3917331D72E68B005393BA /* FiraSans-BoldItalic.ttf in Resources */,
-				CC3917481D7327FD005393BA /* Muli-Light.ttf in Resources */,
 				CC3917381D72E68B005393BA /* FiraSans-MediumItalic.ttf in Resources */,
-				CC3917461D7327FD005393BA /* Muli-Bold.ttf in Resources */,
-				CC3917491D7327FD005393BA /* Muli-SemiBold.ttf in Resources */,
 				CC3917371D72E68B005393BA /* FiraSans-Medium.ttf in Resources */,
-				CC39174A1D7327FD005393BA /* Muli.ttf in Resources */,
 				CC3917391D72E68B005393BA /* FiraSans-Regular.ttf in Resources */,
 				CC3917341D72E68B005393BA /* FiraSans-Italic.ttf in Resources */,
 				CC3917361D72E68B005393BA /* FiraSans-LightItalic.ttf in Resources */,
