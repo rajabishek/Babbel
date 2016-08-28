@@ -42,25 +42,35 @@ class RegistrationController: UIViewController {
         return button
     }()
     
-    let registerLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Register"
-        label.textColor = .darkGrayColor()
-        label.backgroundColor = .clearColor()
-        label.font = UIFont(name: "FiraSans-Regular", size: 13) ?? UIFont.boldSystemFontOfSize(13)
-        label.textAlignment = .Center
-        label.sizeToFit()
-        return label
+    let registerLabel: UIButton = {
+        let button = UIButton(type: .System)
+        button.backgroundColor = .clearColor()
+        button.setTitle("Register", forState: .Normal)
+        button.setTitleColor(UIColor.darkGrayColor(), forState: .Normal)
+        button.titleLabel?.font = UIFont(name: "FiraSans-Regular", size: 13) ?? UIFont.boldSystemFontOfSize(13)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.sizeToFit()
+        return button
     }()
     
-    let registerLabelBorder: UIView = {
+    let activeSectionBorder: UIView = {
         let border = UIView()
         border.translatesAutoresizingMaskIntoConstraints = false
         border.backgroundColor = Color.baseColor
         return border
     }()
-        
+    
+    let loginLabel: UIButton = {
+        let button = UIButton(type: .System)
+        button.backgroundColor = .clearColor()
+        button.setTitle("Sign In", forState: .Normal)
+        button.setTitleColor(UIColor.darkGrayColor(), forState: .Normal)
+        button.titleLabel?.font = UIFont(name: "FiraSans-Regular", size: 13) ?? UIFont.boldSystemFontOfSize(13)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.sizeToFit()
+        return button
+    }()
+    
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return .Default
     }
@@ -77,7 +87,8 @@ class RegistrationController: UIViewController {
         view.addSubview(registerButton)
         view.addSubview(forgotPasswordButton)
         view.addSubview(registerLabel)
-        view.addSubview(registerLabelBorder)
+        view.addSubview(activeSectionBorder)
+        view.addSubview(loginLabel)
 
         var allConstraints = [NSLayoutConstraint]()
         
@@ -86,19 +97,30 @@ class RegistrationController: UIViewController {
         allConstraints += getConstraintsForForgotPasswordButton()
         allConstraints += getConstraintsForRegisterLabel()
         allConstraints += getConstraintsForRegisterLabelBorder()
+        allConstraints += getConstraintsForLoginLabel()
         
         NSLayoutConstraint.activateConstraints(allConstraints)
+    }
+    
+    func getConstraintsForLoginLabel() -> [NSLayoutConstraint] {
+        
+        var constraints = [NSLayoutConstraint]()
+        
+        constraints.append(NSLayoutConstraint(item: loginLabel, attribute: .Left, relatedBy: .Equal, toItem: registerLabel, attribute: .Right, multiplier: 1, constant: 20))
+        constraints.append(NSLayoutConstraint(item: loginLabel, attribute: .Bottom, relatedBy: .Equal, toItem: registrationInputsContainer, attribute: .Top, multiplier: 1, constant: -20))
+        
+        return constraints
     }
     
     func getConstraintsForRegisterLabelBorder() -> [NSLayoutConstraint] {
         
         var constraints = [NSLayoutConstraint]()
         
-        constraints.append(NSLayoutConstraint(item: registerLabelBorder, attribute: .Width, relatedBy: .Equal, toItem: registerLabel, attribute: .Width, multiplier: 1, constant: 0))
-        constraints.append(NSLayoutConstraint(item: registerLabelBorder, attribute: .Top, relatedBy: .Equal, toItem: registerLabel, attribute: .Bottom, multiplier: 1, constant: 0))
-        constraints.append(NSLayoutConstraint(item: registerLabelBorder, attribute: .Left, relatedBy: .Equal, toItem: registerLabel, attribute: .Left, multiplier: 1, constant: 0))
+        constraints.append(NSLayoutConstraint(item: activeSectionBorder, attribute: .Width, relatedBy: .Equal, toItem: registerLabel, attribute: .Width, multiplier: 1, constant: 0))
+        constraints.append(NSLayoutConstraint(item: activeSectionBorder, attribute: .Top, relatedBy: .Equal, toItem: registerLabel, attribute: .Bottom, multiplier: 1, constant: 0))
+        constraints.append(NSLayoutConstraint(item: activeSectionBorder, attribute: .Left, relatedBy: .Equal, toItem: registerLabel, attribute: .Left, multiplier: 1, constant: 0))
         
-        constraints += NSLayoutConstraint.constraintsWithVisualFormat("V:[v0(2)]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": registerLabelBorder])
+        constraints += NSLayoutConstraint.constraintsWithVisualFormat("V:[v0(2)]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": activeSectionBorder])
         
         return constraints
     }
