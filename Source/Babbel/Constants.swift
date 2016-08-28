@@ -10,4 +10,5 @@ import UIKit
 
 class Color {
     static let baseColor = UIColor(red:0.15, green:0.58, blue:1.00, alpha:1.00)
+    static let wildSand = UIColor(red:0.96, green:0.96, blue:0.96, alpha:1.00)
 }
