@@ -166,6 +166,47 @@ class RegistrationController: UIViewController {
         return textfield
     }()
     
+    let registerNameEmailLine: UIView = {
+        let line = UIView()
+        line.backgroundColor = UIColor.lightGrayColor()
+        line.translatesAutoresizingMaskIntoConstraints = false
+        return line
+    }()
+    
+    let registerEmailPasswordLine: UIView = {
+        let line = UIView()
+        line.backgroundColor = UIColor.lightGrayColor()
+        line.translatesAutoresizingMaskIntoConstraints = false
+        return line
+    }()
+    
+    let registerNameIconImageView: UIImageView = {
+        let imageview = UIImageView()
+        imageview.image = UIImage(named: "name-icon")?.imageWithRenderingMode(.AlwaysTemplate)
+        imageview.tintColor = UIColor.lightGrayColor()
+        imageview.translatesAutoresizingMaskIntoConstraints = false
+        imageview.contentMode = .ScaleAspectFill
+        return imageview
+    }()
+    
+    let registerEmailIconImageView: UIImageView = {
+        let imageview = UIImageView()
+        imageview.image = UIImage(named: "email-icon")?.imageWithRenderingMode(.AlwaysTemplate)
+        imageview.tintColor = UIColor.lightGrayColor()
+        imageview.translatesAutoresizingMaskIntoConstraints = false
+        imageview.contentMode = .ScaleAspectFill
+        return imageview
+    }()
+    
+    let registerPasswordIconImageView: UIImageView = {
+        let imageview = UIImageView()
+        imageview.image = UIImage(named: "password-icon")?.imageWithRenderingMode(.AlwaysTemplate)
+        imageview.tintColor = UIColor.lightGrayColor()
+        imageview.translatesAutoresizingMaskIntoConstraints = false
+        imageview.contentMode = .ScaleAspectFill
+        return imageview
+    }()
+    
     let registerSectionContainer: UIView = {
         let container = UIView()
         container.translatesAutoresizingMaskIntoConstraints = false
