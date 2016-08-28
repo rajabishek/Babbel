@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		CC3917251D72E555005393BA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3917241D72E555005393BA /* Constants.swift */; };
+		CC3917321D72E68B005393BA /* FiraSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CC3917291D72E68B005393BA /* FiraSans-Bold.ttf */; };
+		CC3917331D72E68B005393BA /* FiraSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CC39172A1D72E68B005393BA /* FiraSans-BoldItalic.ttf */; };
+		CC3917341D72E68B005393BA /* FiraSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CC39172B1D72E68B005393BA /* FiraSans-Italic.ttf */; };
+		CC3917351D72E68B005393BA /* FiraSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CC39172C1D72E68B005393BA /* FiraSans-Light.ttf */; };
+		CC3917361D72E68B005393BA /* FiraSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CC39172D1D72E68B005393BA /* FiraSans-LightItalic.ttf */; };
+		CC3917371D72E68B005393BA /* FiraSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CC39172E1D72E68B005393BA /* FiraSans-Medium.ttf */; };
+		CC3917381D72E68B005393BA /* FiraSans-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CC39172F1D72E68B005393BA /* FiraSans-MediumItalic.ttf */; };
+		CC3917391D72E68B005393BA /* FiraSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CC3917301D72E68B005393BA /* FiraSans-Regular.ttf */; };
+		CC39173A1D72E68B005393BA /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = CC3917311D72E68B005393BA /* OFL.txt */; };
 		CC5123BE1D72B6F600C8CC7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5123BD1D72B6F600C8CC7A /* AppDelegate.swift */; };
 		CC5123C01D72B6F600C8CC7A /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5123BF1D72B6F600C8CC7A /* HomeController.swift */; };
 		CC5123C61D72B6F600C8CC7A /* Babbel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CC5123C41D72B6F600C8CC7A /* Babbel.xcdatamodeld */; };
@@ -17,6 +26,15 @@
 
 /* Begin PBXFileReference section */
 		CC3917241D72E555005393BA /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CC3917291D72E68B005393BA /* FiraSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FiraSans-Bold.ttf"; sourceTree = "<group>"; };
+		CC39172A1D72E68B005393BA /* FiraSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FiraSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		CC39172B1D72E68B005393BA /* FiraSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FiraSans-Italic.ttf"; sourceTree = "<group>"; };
+		CC39172C1D72E68B005393BA /* FiraSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FiraSans-Light.ttf"; sourceTree = "<group>"; };
+		CC39172D1D72E68B005393BA /* FiraSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FiraSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		CC39172E1D72E68B005393BA /* FiraSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FiraSans-Medium.ttf"; sourceTree = "<group>"; };
+		CC39172F1D72E68B005393BA /* FiraSans-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FiraSans-MediumItalic.ttf"; sourceTree = "<group>"; };
+		CC3917301D72E68B005393BA /* FiraSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FiraSans-Regular.ttf"; sourceTree = "<group>"; };
+		CC3917311D72E68B005393BA /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		CC5123BA1D72B6F600C8CC7A /* Babbel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Babbel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC5123BD1D72B6F600C8CC7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC5123BF1D72B6F600C8CC7A /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -45,6 +63,39 @@
 			name = Helpers;
 			sourceTree = "<group>";
 		};
+		CC3917261D72E654005393BA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CC5123C71D72B6F600C8CC7A /* Assets.xcassets */,
+				CC3917271D72E676005393BA /* Fonts */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		CC3917271D72E676005393BA /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CC3917281D72E68B005393BA /* Fira Sans */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		CC3917281D72E68B005393BA /* Fira Sans */ = {
+			isa = PBXGroup;
+			children = (
+				CC3917291D72E68B005393BA /* FiraSans-Bold.ttf */,
+				CC39172A1D72E68B005393BA /* FiraSans-BoldItalic.ttf */,
+				CC39172B1D72E68B005393BA /* FiraSans-Italic.ttf */,
+				CC39172C1D72E68B005393BA /* FiraSans-Light.ttf */,
+				CC39172D1D72E68B005393BA /* FiraSans-LightItalic.ttf */,
+				CC39172E1D72E68B005393BA /* FiraSans-Medium.ttf */,
+				CC39172F1D72E68B005393BA /* FiraSans-MediumItalic.ttf */,
+				CC3917301D72E68B005393BA /* FiraSans-Regular.ttf */,
+				CC3917311D72E68B005393BA /* OFL.txt */,
+			);
+			path = "Fira Sans";
+			sourceTree = "<group>";
+		};
 		CC3F388F1D72DB68009E4625 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -57,7 +108,6 @@
 			isa = PBXGroup;
 			children = (
 				CC5123BD1D72B6F600C8CC7A /* AppDelegate.swift */,
-				CC5123C71D72B6F600C8CC7A /* Assets.xcassets */,
 				CC5123CC1D72B6F600C8CC7A /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -98,6 +148,7 @@
 		CC5123BC1D72B6F600C8CC7A /* Babbel */ = {
 			isa = PBXGroup;
 			children = (
+				CC3917261D72E654005393BA /* Resources */,
 				CC3917231D72E547005393BA /* Helpers */,
 				CC3F38901D72DB92009E4625 /* Supporting Files */,
 				CC3F38911D72DB9D009E4625 /* Model */,
@@ -165,7 +216,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC3917351D72E68B005393BA /* FiraSans-Light.ttf in Resources */,
+				CC39173A1D72E68B005393BA /* OFL.txt in Resources */,
+				CC3917321D72E68B005393BA /* FiraSans-Bold.ttf in Resources */,
 				CC5123CB1D72B6F600C8CC7A /* LaunchScreen.storyboard in Resources */,
+				CC3917331D72E68B005393BA /* FiraSans-BoldItalic.ttf in Resources */,
+				CC3917381D72E68B005393BA /* FiraSans-MediumItalic.ttf in Resources */,
+				CC3917371D72E68B005393BA /* FiraSans-Medium.ttf in Resources */,
+				CC3917391D72E68B005393BA /* FiraSans-Regular.ttf in Resources */,
+				CC3917341D72E68B005393BA /* FiraSans-Italic.ttf in Resources */,
+				CC3917361D72E68B005393BA /* FiraSans-LightItalic.ttf in Resources */,
 				CC5123C81D72B6F600C8CC7A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
