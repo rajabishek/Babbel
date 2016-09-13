@@ -12,24 +12,24 @@ extension RegistrationController {
     
     func loginLabelWasClicked() {
         activeSectionHighLightLeftConstraint?.constant = 0
-        UIView.animateWithDuration(0.35, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .CurveEaseOut, animations: {
+        UIView.animate(withDuration: 0.35, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
             self.view.layoutIfNeeded()
         }, completion: nil)
-        self.loginLabel.setTitleColor(Color.wildSand, forState: .Normal)
-        self.registerLabel.setTitleColor(Color.mediumGray, forState: .Normal)
-        self.loginSectionContainer.hidden = false
-        self.registerSectionContainer.hidden = true
+        self.loginLabel.setTitleColor(Color.wildSand, for: UIControlState())
+        self.registerLabel.setTitleColor(Color.mediumGray, for: UIControlState())
+        self.loginSectionContainer.isHidden = false
+        self.registerSectionContainer.isHidden = true
     }
     
     func registerLabelWasClicked() {
         activeSectionHighLightLeftConstraint?.constant = loginLabel.frame.width + 20
-        UIView.animateWithDuration(0.35, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .CurveEaseOut, animations: {
+        UIView.animate(withDuration: 0.35, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
             self.view.layoutIfNeeded()
         }, completion: nil)
-        self.loginLabel.setTitleColor(Color.mediumGray, forState: .Normal)
-        self.registerLabel.setTitleColor(Color.wildSand, forState: .Normal)
-        self.loginSectionContainer.hidden = true
-        self.registerSectionContainer.hidden = false
+        self.loginLabel.setTitleColor(Color.mediumGray, for: UIControlState())
+        self.registerLabel.setTitleColor(Color.wildSand, for: UIControlState())
+        self.loginSectionContainer.isHidden = true
+        self.registerSectionContainer.isHidden = false
     }
     
     func setupLayout() {
@@ -92,18 +92,18 @@ extension RegistrationController {
         allConstraints += getConstraintsForLoginButton()
         allConstraints += getConstraintsForForgotPasswordButton()
         
-        NSLayoutConstraint.activateConstraints(allConstraints)
+        NSLayoutConstraint.activate(allConstraints)
         
-        registerSectionContainer.hidden = true
+        registerSectionContainer.isHidden = true
     }
     
     func getConstraintsForRegisterNameIconImageView() -> [NSLayoutConstraint] {
         
         var constraints = [NSLayoutConstraint]()
         
-        constraints += NSLayoutConstraint.constraintsWithVisualFormat("H:|-10-[v0(11)]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": registerNameIconImageView])
-        constraints += NSLayoutConstraint.constraintsWithVisualFormat("V:[v0(11)]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": registerNameIconImageView])
-        constraints.append(NSLayoutConstraint(item: registerNameIconImageView, attribute: .Top, relatedBy: .Equal, toItem: registrationInputsContainer, attribute: .Top, multiplier: 1, constant: 12))
+        constraints += NSLayoutConstraint.constraints(withVisualFormat: "H:|-10-[v0(11)]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": registerNameIconImageView])
+        constraints += NSLayoutConstraint.constraints(withVisualFormat: "V:[v0(11)]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": registerNameIconImageView])
+        constraints.append(NSLayoutConstraint(item: registerNameIconImageView, attribute: .top, relatedBy: .equal, toItem: registrationInputsContainer, attribute: .top, multiplier: 1, constant: 12))
         return constraints
     }
     
@@ -111,9 +111,9 @@ extension RegistrationController {
         
         var constraints = [NSLayoutConstraint]()
         
-        constraints += NSLayoutConstraint.constraintsWithVisualFormat("H:|-10-[v0(11)]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": registerEmailIconImageView])
-        constraints += NSLayoutConstraint.constraintsWithVisualFormat("V:[v0(11)]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": registerEmailIconImageView])
-        constraints.append(NSLayoutConstraint(item: registerEmailIconImageView, attribute: .Top, relatedBy: .Equal, toItem: registerNameEmailLine, attribute: .Bottom, multiplier: 1, constant: 12))
+        constraints += NSLayoutConstraint.constraints(withVisualFormat: "H:|-10-[v0(11)]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": registerEmailIconImageView])
+        constraints += NSLayoutConstraint.constraints(withVisualFormat: "V:[v0(11)]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": registerEmailIconImageView])
+        constraints.append(NSLayoutConstraint(item: registerEmailIconImageView, attribute: .top, relatedBy: .equal, toItem: registerNameEmailLine, attribute: .bottom, multiplier: 1, constant: 12))
         return constraints
     }
 
@@ -122,9 +122,9 @@ extension RegistrationController {
         
         var constraints = [NSLayoutConstraint]()
         
-        constraints += NSLayoutConstraint.constraintsWithVisualFormat("H:|-10-[v0(11)]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": registerPasswordIconImageView])
-        constraints += NSLayoutConstraint.constraintsWithVisualFormat("V:[v0(11)]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": registerPasswordIconImageView])
-        constraints.append(NSLayoutConstraint(item: registerPasswordIconImageView, attribute: .Top, relatedBy: .Equal, toItem: registerEmailPasswordLine, attribute: .Bottom, multiplier: 1, constant: 12))
+        constraints += NSLayoutConstraint.constraints(withVisualFormat: "H:|-10-[v0(11)]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": registerPasswordIconImageView])
+        constraints += NSLayoutConstraint.constraints(withVisualFormat: "V:[v0(11)]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": registerPasswordIconImageView])
+        constraints.append(NSLayoutConstraint(item: registerPasswordIconImageView, attribute: .top, relatedBy: .equal, toItem: registerEmailPasswordLine, attribute: .bottom, multiplier: 1, constant: 12))
         return constraints
     }
 
@@ -133,9 +133,9 @@ extension RegistrationController {
         
         var constraints = [NSLayoutConstraint]()
         
-        constraints += NSLayoutConstraint.constraintsWithVisualFormat("H:|-10-[v0(11)]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": loginEmailIconImageView])
-        constraints += NSLayoutConstraint.constraintsWithVisualFormat("V:[v0(11)]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": loginEmailIconImageView])
-        constraints.append(NSLayoutConstraint(item: loginEmailIconImageView, attribute: .Top, relatedBy: .Equal, toItem: loginInputsContainer, attribute: .Top, multiplier: 1, constant: 12))
+        constraints += NSLayoutConstraint.constraints(withVisualFormat: "H:|-10-[v0(11)]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": loginEmailIconImageView])
+        constraints += NSLayoutConstraint.constraints(withVisualFormat: "V:[v0(11)]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": loginEmailIconImageView])
+        constraints.append(NSLayoutConstraint(item: loginEmailIconImageView, attribute: .top, relatedBy: .equal, toItem: loginInputsContainer, attribute: .top, multiplier: 1, constant: 12))
         return constraints
     }
     
@@ -143,9 +143,9 @@ extension RegistrationController {
         
         var constraints = [NSLayoutConstraint]()
         
-        constraints += NSLayoutConstraint.constraintsWithVisualFormat("H:|-10-[v0(11)]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": loginPasswordIconImageView])
-        constraints += NSLayoutConstraint.constraintsWithVisualFormat("V:[v0(11)]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": loginPasswordIconImageView])
-        constraints.append(NSLayoutConstraint(item: loginPasswordIconImageView, attribute: .Top, relatedBy: .Equal, toItem: loginEmailPasswordLine, attribute: .Top, multiplier: 1, constant: 12))
+        constraints += NSLayoutConstraint.constraints(withVisualFormat: "H:|-10-[v0(11)]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": loginPasswordIconImageView])
+        constraints += NSLayoutConstraint.constraints(withVisualFormat: "V:[v0(11)]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": loginPasswordIconImageView])
+        constraints.append(NSLayoutConstraint(item: loginPasswordIconImageView, attribute: .top, relatedBy: .equal, toItem: loginEmailPasswordLine, attribute: .top, multiplier: 1, constant: 12))
         return constraints
     }
     
@@ -153,11 +153,11 @@ extension RegistrationController {
         
         var constraints = [NSLayoutConstraint]()
         
-        constraints += NSLayoutConstraint.constraintsWithVisualFormat("H:[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": registerNameTextField])
+        constraints += NSLayoutConstraint.constraints(withVisualFormat: "H:[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": registerNameTextField])
         
-        constraints.append(NSLayoutConstraint(item: registerNameTextField, attribute: .Height, relatedBy: .Equal, toItem: registrationInputsContainer, attribute: .Height, multiplier: 1/3, constant: 0))
-        constraints.append(NSLayoutConstraint(item: registerNameTextField, attribute: .Top, relatedBy: .Equal, toItem: registrationInputsContainer, attribute: .Top, multiplier: 1, constant: 0))
-        constraints.append(NSLayoutConstraint(item: registerNameTextField, attribute: .Left, relatedBy: .Equal, toItem: registerNameIconImageView, attribute: .Right, multiplier: 1, constant: 10))
+        constraints.append(NSLayoutConstraint(item: registerNameTextField, attribute: .height, relatedBy: .equal, toItem: registrationInputsContainer, attribute: .height, multiplier: 1/3, constant: 0))
+        constraints.append(NSLayoutConstraint(item: registerNameTextField, attribute: .top, relatedBy: .equal, toItem: registrationInputsContainer, attribute: .top, multiplier: 1, constant: 0))
+        constraints.append(NSLayoutConstraint(item: registerNameTextField, attribute: .left, relatedBy: .equal, toItem: registerNameIconImageView, attribute: .right, multiplier: 1, constant: 10))
         
         return constraints
     }
@@ -166,9 +166,9 @@ extension RegistrationController {
         
         var constraints = [NSLayoutConstraint]()
         
-        constraints += NSLayoutConstraint.constraintsWithVisualFormat("H:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": registerNameEmailLine])
-        constraints += NSLayoutConstraint.constraintsWithVisualFormat("V:[v0(1)]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": registerNameEmailLine])
-        constraints.append(NSLayoutConstraint(item: registerNameEmailLine, attribute: .Top, relatedBy: .Equal, toItem: registerNameTextField, attribute: .Bottom, multiplier: 1, constant: 0))
+        constraints += NSLayoutConstraint.constraints(withVisualFormat: "H:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": registerNameEmailLine])
+        constraints += NSLayoutConstraint.constraints(withVisualFormat: "V:[v0(1)]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": registerNameEmailLine])
+        constraints.append(NSLayoutConstraint(item: registerNameEmailLine, attribute: .top, relatedBy: .equal, toItem: registerNameTextField, attribute: .bottom, multiplier: 1, constant: 0))
         
         return constraints
     }
@@ -177,9 +177,9 @@ extension RegistrationController {
         
         var constraints = [NSLayoutConstraint]()
         
-        constraints += NSLayoutConstraint.constraintsWithVisualFormat("H:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": registerEmailPasswordLine])
-        constraints += NSLayoutConstraint.constraintsWithVisualFormat("V:[v0(1)]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": registerEmailPasswordLine])
-        constraints.append(NSLayoutConstraint(item: registerEmailPasswordLine, attribute: .Top, relatedBy: .Equal, toItem: registerEmailTextField, attribute: .Bottom, multiplier: 1, constant: 0))
+        constraints += NSLayoutConstraint.constraints(withVisualFormat: "H:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": registerEmailPasswordLine])
+        constraints += NSLayoutConstraint.constraints(withVisualFormat: "V:[v0(1)]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": registerEmailPasswordLine])
+        constraints.append(NSLayoutConstraint(item: registerEmailPasswordLine, attribute: .top, relatedBy: .equal, toItem: registerEmailTextField, attribute: .bottom, multiplier: 1, constant: 0))
         
         return constraints
     }
@@ -188,11 +188,11 @@ extension RegistrationController {
         
         var constraints = [NSLayoutConstraint]()
         
-        constraints += NSLayoutConstraint.constraintsWithVisualFormat("H:[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": registerPasswordTextField])
+        constraints += NSLayoutConstraint.constraints(withVisualFormat: "H:[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": registerPasswordTextField])
         
-        constraints.append(NSLayoutConstraint(item: registerPasswordTextField, attribute: .Height, relatedBy: .Equal, toItem: registrationInputsContainer, attribute: .Height, multiplier: 1/3, constant: 0))
-        constraints.append(NSLayoutConstraint(item: registerPasswordTextField, attribute: .Top, relatedBy: .Equal, toItem: registerEmailPasswordLine, attribute: .Bottom, multiplier: 1, constant: 0))
-        constraints.append(NSLayoutConstraint(item: registerPasswordTextField, attribute: .Left, relatedBy: .Equal, toItem: registerPasswordIconImageView, attribute: .Right, multiplier: 1, constant: 10))
+        constraints.append(NSLayoutConstraint(item: registerPasswordTextField, attribute: .height, relatedBy: .equal, toItem: registrationInputsContainer, attribute: .height, multiplier: 1/3, constant: 0))
+        constraints.append(NSLayoutConstraint(item: registerPasswordTextField, attribute: .top, relatedBy: .equal, toItem: registerEmailPasswordLine, attribute: .bottom, multiplier: 1, constant: 0))
+        constraints.append(NSLayoutConstraint(item: registerPasswordTextField, attribute: .left, relatedBy: .equal, toItem: registerPasswordIconImageView, attribute: .right, multiplier: 1, constant: 10))
         return constraints
     }
     
@@ -200,11 +200,11 @@ extension RegistrationController {
         
         var constraints = [NSLayoutConstraint]()
         
-        constraints += NSLayoutConstraint.constraintsWithVisualFormat("H:[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": registerEmailTextField])
+        constraints += NSLayoutConstraint.constraints(withVisualFormat: "H:[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": registerEmailTextField])
         
-        constraints.append(NSLayoutConstraint(item: registerEmailTextField, attribute: .Height, relatedBy: .Equal, toItem: registrationInputsContainer, attribute: .Height, multiplier: 1/3, constant: 0))
-        constraints.append(NSLayoutConstraint(item: registerEmailTextField, attribute: .Top, relatedBy: .Equal, toItem: registerNameEmailLine, attribute: .Bottom, multiplier: 1, constant: 0))
-        constraints.append(NSLayoutConstraint(item: registerEmailTextField, attribute: .Left, relatedBy: .Equal, toItem: registerEmailIconImageView, attribute: .Right, multiplier: 1, constant: 10))
+        constraints.append(NSLayoutConstraint(item: registerEmailTextField, attribute: .height, relatedBy: .equal, toItem: registrationInputsContainer, attribute: .height, multiplier: 1/3, constant: 0))
+        constraints.append(NSLayoutConstraint(item: registerEmailTextField, attribute: .top, relatedBy: .equal, toItem: registerNameEmailLine, attribute: .bottom, multiplier: 1, constant: 0))
+        constraints.append(NSLayoutConstraint(item: registerEmailTextField, attribute: .left, relatedBy: .equal, toItem: registerEmailIconImageView, attribute: .right, multiplier: 1, constant: 10))
         return constraints
     }
     
@@ -212,9 +212,9 @@ extension RegistrationController {
         
         var constraints = [NSLayoutConstraint]()
         
-        constraints += NSLayoutConstraint.constraintsWithVisualFormat("H:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": loginEmailPasswordLine])
-        constraints += NSLayoutConstraint.constraintsWithVisualFormat("V:[v0(1)]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": loginEmailPasswordLine])
-        constraints.append(NSLayoutConstraint(item: loginEmailPasswordLine, attribute: .Top, relatedBy: .Equal, toItem: loginEmailTextField, attribute: .Bottom, multiplier: 1, constant: 0))
+        constraints += NSLayoutConstraint.constraints(withVisualFormat: "H:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": loginEmailPasswordLine])
+        constraints += NSLayoutConstraint.constraints(withVisualFormat: "V:[v0(1)]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": loginEmailPasswordLine])
+        constraints.append(NSLayoutConstraint(item: loginEmailPasswordLine, attribute: .top, relatedBy: .equal, toItem: loginEmailTextField, attribute: .bottom, multiplier: 1, constant: 0))
         
         return constraints
     }
@@ -224,11 +224,11 @@ extension RegistrationController {
         
         var constraints = [NSLayoutConstraint]()
         
-        constraints += NSLayoutConstraint.constraintsWithVisualFormat("H:[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": loginEmailTextField])
+        constraints += NSLayoutConstraint.constraints(withVisualFormat: "H:[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": loginEmailTextField])
         
-        constraints.append(NSLayoutConstraint(item: loginEmailTextField, attribute: .Height, relatedBy: .Equal, toItem: loginInputsContainer, attribute: .Height, multiplier: 1/2, constant: 0))
-        constraints.append(NSLayoutConstraint(item: loginEmailTextField, attribute: .Top, relatedBy: .Equal, toItem: loginInputsContainer, attribute: .Top, multiplier: 1, constant: 0))
-        constraints.append(NSLayoutConstraint(item: loginEmailTextField, attribute: .Left, relatedBy: .Equal, toItem: loginEmailIconImageView, attribute: .Right, multiplier: 1, constant: 10))
+        constraints.append(NSLayoutConstraint(item: loginEmailTextField, attribute: .height, relatedBy: .equal, toItem: loginInputsContainer, attribute: .height, multiplier: 1/2, constant: 0))
+        constraints.append(NSLayoutConstraint(item: loginEmailTextField, attribute: .top, relatedBy: .equal, toItem: loginInputsContainer, attribute: .top, multiplier: 1, constant: 0))
+        constraints.append(NSLayoutConstraint(item: loginEmailTextField, attribute: .left, relatedBy: .equal, toItem: loginEmailIconImageView, attribute: .right, multiplier: 1, constant: 10))
         
         return constraints
     }
@@ -237,11 +237,11 @@ extension RegistrationController {
         
         var constraints = [NSLayoutConstraint]()
         
-        constraints += NSLayoutConstraint.constraintsWithVisualFormat("H:[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": loginPasswordTextField])
+        constraints += NSLayoutConstraint.constraints(withVisualFormat: "H:[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": loginPasswordTextField])
         
-        constraints.append(NSLayoutConstraint(item: loginPasswordTextField, attribute: .Height, relatedBy: .Equal, toItem: loginInputsContainer, attribute: .Height, multiplier: 1/2, constant: 0))
-        constraints.append(NSLayoutConstraint(item: loginPasswordTextField, attribute: .Bottom, relatedBy: .Equal, toItem: loginInputsContainer, attribute: .Bottom, multiplier: 1, constant: 0))
-        constraints.append(NSLayoutConstraint(item: loginPasswordTextField, attribute: .Left, relatedBy: .Equal, toItem: loginPasswordIconImageView, attribute: .Right, multiplier: 1, constant: 10))
+        constraints.append(NSLayoutConstraint(item: loginPasswordTextField, attribute: .height, relatedBy: .equal, toItem: loginInputsContainer, attribute: .height, multiplier: 1/2, constant: 0))
+        constraints.append(NSLayoutConstraint(item: loginPasswordTextField, attribute: .bottom, relatedBy: .equal, toItem: loginInputsContainer, attribute: .bottom, multiplier: 1, constant: 0))
+        constraints.append(NSLayoutConstraint(item: loginPasswordTextField, attribute: .left, relatedBy: .equal, toItem: loginPasswordIconImageView, attribute: .right, multiplier: 1, constant: 10))
         return constraints
     }
     
@@ -249,8 +249,8 @@ extension RegistrationController {
         
         var constraints = [NSLayoutConstraint]()
         
-        constraints.append(NSLayoutConstraint(item: bannerLabel, attribute: .CenterX, relatedBy: .Equal, toItem: view, attribute: .CenterX, multiplier: 1, constant: 0))
-        constraints.append(NSLayoutConstraint(item: bannerLabel, attribute: .Top, relatedBy: .Equal, toItem: view, attribute: .Top, multiplier: 1, constant: 100))
+        constraints.append(NSLayoutConstraint(item: bannerLabel, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1, constant: 0))
+        constraints.append(NSLayoutConstraint(item: bannerLabel, attribute: .top, relatedBy: .equal, toItem: view, attribute: .top, multiplier: 1, constant: 100))
         
         return constraints
     }
@@ -260,8 +260,8 @@ extension RegistrationController {
         
         var constraints = [NSLayoutConstraint]()
         
-        constraints.append(NSLayoutConstraint(item: loginLabel, attribute: .Left, relatedBy: .Equal, toItem: view, attribute: .Left, multiplier: 1, constant: 35))
-        constraints.append(NSLayoutConstraint(item: loginLabel, attribute: .Top, relatedBy: .Equal, toItem: bannerLabel, attribute: .Bottom, multiplier: 1, constant: 10))
+        constraints.append(NSLayoutConstraint(item: loginLabel, attribute: .left, relatedBy: .equal, toItem: view, attribute: .left, multiplier: 1, constant: 35))
+        constraints.append(NSLayoutConstraint(item: loginLabel, attribute: .top, relatedBy: .equal, toItem: bannerLabel, attribute: .bottom, multiplier: 1, constant: 10))
         
         return constraints
     }
@@ -270,13 +270,13 @@ extension RegistrationController {
         
         var constraints = [NSLayoutConstraint]()
         //constraints.append(NSLayoutConstraint(item: activeSectionHighlight, attribute: .Width, relatedBy: .Equal, toItem: loginLabel, attribute: .Width, multiplier: 1, constant: 0))
-        constraints.append(NSLayoutConstraint(item: activeSectionHighlight, attribute: .Top, relatedBy: .Equal, toItem: registerLabel, attribute: .Bottom, multiplier: 1, constant: 0))
-        activeSectionHighLightLeftConstraint = NSLayoutConstraint(item: activeSectionHighlight, attribute: .Left, relatedBy: .Equal, toItem: loginLabel, attribute: .Left, multiplier: 1, constant: 0)
+        constraints.append(NSLayoutConstraint(item: activeSectionHighlight, attribute: .top, relatedBy: .equal, toItem: registerLabel, attribute: .bottom, multiplier: 1, constant: 0))
+        activeSectionHighLightLeftConstraint = NSLayoutConstraint(item: activeSectionHighlight, attribute: .left, relatedBy: .equal, toItem: loginLabel, attribute: .left, multiplier: 1, constant: 0)
         constraints.append(activeSectionHighLightLeftConstraint!)
         
         let width = (loginLabel.frame.width + registerLabel.frame.width) / 2
-        constraints += NSLayoutConstraint.constraintsWithVisualFormat("V:[v0(2)]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": activeSectionHighlight])
-        constraints += NSLayoutConstraint.constraintsWithVisualFormat("H:[v0(\(width))]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": activeSectionHighlight])
+        constraints += NSLayoutConstraint.constraints(withVisualFormat: "V:[v0(2)]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": activeSectionHighlight])
+        constraints += NSLayoutConstraint.constraints(withVisualFormat: "H:[v0(\(width))]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": activeSectionHighlight])
         
         return constraints
     }
@@ -285,8 +285,8 @@ extension RegistrationController {
         
         var constraints = [NSLayoutConstraint]()
         
-        constraints.append(NSLayoutConstraint(item: registerLabel, attribute: .Left, relatedBy: .Equal, toItem: loginLabel, attribute: .Right, multiplier: 1, constant: 20))
-        constraints.append(NSLayoutConstraint(item: registerLabel, attribute: .Bottom, relatedBy: .Equal, toItem: loginLabel, attribute: .Bottom, multiplier: 1, constant: 0))
+        constraints.append(NSLayoutConstraint(item: registerLabel, attribute: .left, relatedBy: .equal, toItem: loginLabel, attribute: .right, multiplier: 1, constant: 20))
+        constraints.append(NSLayoutConstraint(item: registerLabel, attribute: .bottom, relatedBy: .equal, toItem: loginLabel, attribute: .bottom, multiplier: 1, constant: 0))
         
         return constraints
     }
@@ -295,10 +295,10 @@ extension RegistrationController {
         
         var constraints = [NSLayoutConstraint]()
         
-        constraints += NSLayoutConstraint.constraintsWithVisualFormat("H:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": registrationInputsContainer])
-        constraints += NSLayoutConstraint.constraintsWithVisualFormat("V:[v0(110)]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": registrationInputsContainer])
+        constraints += NSLayoutConstraint.constraints(withVisualFormat: "H:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": registrationInputsContainer])
+        constraints += NSLayoutConstraint.constraints(withVisualFormat: "V:[v0(110)]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": registrationInputsContainer])
         
-        constraints.append(NSLayoutConstraint(item: registrationInputsContainer, attribute: .Top, relatedBy: .Equal, toItem: registerSectionContainer, attribute: .Top, multiplier: 1, constant: 0))
+        constraints.append(NSLayoutConstraint(item: registrationInputsContainer, attribute: .top, relatedBy: .equal, toItem: registerSectionContainer, attribute: .top, multiplier: 1, constant: 0))
         
         return constraints
     }
@@ -307,10 +307,10 @@ extension RegistrationController {
         
         var constraints = [NSLayoutConstraint]()
         
-        constraints += NSLayoutConstraint.constraintsWithVisualFormat("H:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": loginInputsContainer])
-        constraints += NSLayoutConstraint.constraintsWithVisualFormat("V:[v0(73)]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": loginInputsContainer])
+        constraints += NSLayoutConstraint.constraints(withVisualFormat: "H:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": loginInputsContainer])
+        constraints += NSLayoutConstraint.constraints(withVisualFormat: "V:[v0(73)]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": loginInputsContainer])
         
-        constraints.append(NSLayoutConstraint(item: loginInputsContainer, attribute: .Top, relatedBy: .Equal, toItem: loginSectionContainer, attribute: .Top, multiplier: 1, constant: 0))
+        constraints.append(NSLayoutConstraint(item: loginInputsContainer, attribute: .top, relatedBy: .equal, toItem: loginSectionContainer, attribute: .top, multiplier: 1, constant: 0))
         
         return constraints
     }
@@ -319,10 +319,10 @@ extension RegistrationController {
         
         var constraints = [NSLayoutConstraint]()
         
-        constraints += NSLayoutConstraint.constraintsWithVisualFormat("V:[v0(36)]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": registerButton])
-        constraints.append(NSLayoutConstraint(item: registerButton, attribute: .Width, relatedBy: .Equal, toItem: registrationInputsContainer, attribute: .Width, multiplier: 1, constant: 0))
-        constraints.append(NSLayoutConstraint(item: registerButton, attribute: .Top, relatedBy: .Equal, toItem: registrationInputsContainer, attribute: .Bottom, multiplier: 1, constant: 20))
-        constraints.append(NSLayoutConstraint(item: registerButton, attribute: .CenterX, relatedBy: .Equal, toItem: registrationInputsContainer, attribute: .CenterX, multiplier: 1, constant: 0))
+        constraints += NSLayoutConstraint.constraints(withVisualFormat: "V:[v0(36)]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": registerButton])
+        constraints.append(NSLayoutConstraint(item: registerButton, attribute: .width, relatedBy: .equal, toItem: registrationInputsContainer, attribute: .width, multiplier: 1, constant: 0))
+        constraints.append(NSLayoutConstraint(item: registerButton, attribute: .top, relatedBy: .equal, toItem: registrationInputsContainer, attribute: .bottom, multiplier: 1, constant: 20))
+        constraints.append(NSLayoutConstraint(item: registerButton, attribute: .centerX, relatedBy: .equal, toItem: registrationInputsContainer, attribute: .centerX, multiplier: 1, constant: 0))
         
         return constraints
     }
@@ -331,10 +331,10 @@ extension RegistrationController {
         
         var constraints = [NSLayoutConstraint]()
         
-        constraints += NSLayoutConstraint.constraintsWithVisualFormat("V:[v0(36)]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": loginButton])
-        constraints.append(NSLayoutConstraint(item: loginButton, attribute: .Width, relatedBy: .Equal, toItem: loginInputsContainer, attribute: .Width, multiplier: 1, constant: 0))
-        constraints.append(NSLayoutConstraint(item: loginButton, attribute: .Top, relatedBy: .Equal, toItem: loginInputsContainer, attribute: .Bottom, multiplier: 1, constant: 20))
-        constraints.append(NSLayoutConstraint(item: loginButton, attribute: .CenterX, relatedBy: .Equal, toItem: loginInputsContainer, attribute: .CenterX, multiplier: 1, constant: 0))
+        constraints += NSLayoutConstraint.constraints(withVisualFormat: "V:[v0(36)]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": loginButton])
+        constraints.append(NSLayoutConstraint(item: loginButton, attribute: .width, relatedBy: .equal, toItem: loginInputsContainer, attribute: .width, multiplier: 1, constant: 0))
+        constraints.append(NSLayoutConstraint(item: loginButton, attribute: .top, relatedBy: .equal, toItem: loginInputsContainer, attribute: .bottom, multiplier: 1, constant: 20))
+        constraints.append(NSLayoutConstraint(item: loginButton, attribute: .centerX, relatedBy: .equal, toItem: loginInputsContainer, attribute: .centerX, multiplier: 1, constant: 0))
         
         return constraints
     }
@@ -344,8 +344,8 @@ extension RegistrationController {
         
         var constraints = [NSLayoutConstraint]()
         
-        constraints.append(NSLayoutConstraint(item: forgotPasswordButton, attribute: .CenterX, relatedBy: .Equal, toItem: loginButton, attribute: .CenterX, multiplier: 1, constant: 0))
-        constraints.append(NSLayoutConstraint(item: forgotPasswordButton, attribute: .Top, relatedBy: .Equal, toItem: loginButton, attribute: .Bottom, multiplier: 1, constant: 10))
+        constraints.append(NSLayoutConstraint(item: forgotPasswordButton, attribute: .centerX, relatedBy: .equal, toItem: loginButton, attribute: .centerX, multiplier: 1, constant: 0))
+        constraints.append(NSLayoutConstraint(item: forgotPasswordButton, attribute: .top, relatedBy: .equal, toItem: loginButton, attribute: .bottom, multiplier: 1, constant: 10))
         
         return constraints
     }
@@ -354,10 +354,10 @@ extension RegistrationController {
         
         var constraints = [NSLayoutConstraint]()
         
-        constraints += NSLayoutConstraint.constraintsWithVisualFormat("H:|-35-[v0]-35-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": loginSectionContainer])
+        constraints += NSLayoutConstraint.constraints(withVisualFormat: "H:|-35-[v0]-35-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": loginSectionContainer])
         let contentsHeight = 73 + 20 + 36 + 10 + forgotPasswordButton.frame.height
-        constraints += NSLayoutConstraint.constraintsWithVisualFormat("V:[v0(\(contentsHeight))]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": loginSectionContainer])
-        constraints.append(NSLayoutConstraint(item: loginSectionContainer, attribute: .Top, relatedBy: .Equal, toItem: registerLabel, attribute: .Bottom, multiplier: 1, constant: 20))
+        constraints += NSLayoutConstraint.constraints(withVisualFormat: "V:[v0(\(contentsHeight))]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": loginSectionContainer])
+        constraints.append(NSLayoutConstraint(item: loginSectionContainer, attribute: .top, relatedBy: .equal, toItem: registerLabel, attribute: .bottom, multiplier: 1, constant: 20))
         
         return constraints
     }
@@ -366,10 +366,10 @@ extension RegistrationController {
         
         var constraints = [NSLayoutConstraint]()
         
-        constraints += NSLayoutConstraint.constraintsWithVisualFormat("H:|-35-[v0]-35-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": registerSectionContainer])
+        constraints += NSLayoutConstraint.constraints(withVisualFormat: "H:|-35-[v0]-35-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": registerSectionContainer])
         let contentsHeight = 110 + 20 + 36
-        constraints += NSLayoutConstraint.constraintsWithVisualFormat("V:[v0(\(contentsHeight))]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": registerSectionContainer])
-        constraints.append(NSLayoutConstraint(item: registerSectionContainer, attribute: .Top, relatedBy: .Equal, toItem: registerLabel, attribute: .Bottom, multiplier: 1, constant: 20))
+        constraints += NSLayoutConstraint.constraints(withVisualFormat: "V:[v0(\(contentsHeight))]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": registerSectionContainer])
+        constraints.append(NSLayoutConstraint(item: registerSectionContainer, attribute: .top, relatedBy: .equal, toItem: registerLabel, attribute: .bottom, multiplier: 1, constant: 20))
         
         return constraints
     }

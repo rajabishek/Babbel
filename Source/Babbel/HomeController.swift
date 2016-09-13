@@ -16,16 +16,16 @@ class HomeController: UITableViewController {
         setupNavigationBar()
     }
     
-    func getTitleViewForNavigationBar(title: String, color: UIColor = .whiteColor(), fontName: String = "FiraSans-Regular", fontSize: CGFloat = 17) -> UILabel {
+    func getTitleViewForNavigationBar(_ title: String, color: UIColor = .white, fontName: String = "FiraSans-Regular", fontSize: CGFloat = 17) -> UILabel {
         
         let titleLabel = UILabel()
         titleLabel.text = title
-        titleLabel.font = UIFont(name: fontName, size: fontSize) ?? UIFont.systemFontOfSize(fontSize)
+        titleLabel.font = UIFont(name: fontName, size: fontSize) ?? UIFont.systemFont(ofSize: fontSize)
         titleLabel.numberOfLines = 1
-        titleLabel.textAlignment = .Center
+        titleLabel.textAlignment = .center
         titleLabel.textColor = color
-        titleLabel.textAlignment = .Center
-        titleLabel.backgroundColor = .clearColor()
+        titleLabel.textAlignment = .center
+        titleLabel.backgroundColor = .clear
         titleLabel.sizeToFit()
         
         return titleLabel
@@ -37,19 +37,19 @@ class HomeController: UITableViewController {
         navigationItem.titleView = getTitleViewForNavigationBar("Raj Abishek")
         
         //Status bar must be a light content
-        navigationController?.navigationBar.barStyle = .Black;
+        navigationController?.navigationBar.barStyle = .black;
         
         //Set the left bar button item for the navigation bar
-        let logoutButton = UIBarButtonItem(title: "Logout", style: .Plain, target: self, action: #selector(handleLogout))
-        let textAttributes = [NSFontAttributeName: UIFont(name: "FiraSans-Medium", size: 14) ?? UIFont.systemFontOfSize(14), NSForegroundColorAttributeName: UIColor.whiteColor()]
-        logoutButton.setTitleTextAttributes(textAttributes, forState: UIControlState.Normal)
+        let logoutButton = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(handleLogout))
+        let textAttributes = [NSFontAttributeName: UIFont(name: "FiraSans-Medium", size: 14) ?? UIFont.systemFont(ofSize: 14), NSForegroundColorAttributeName: UIColor.white]
+        logoutButton.setTitleTextAttributes(textAttributes, for: UIControlState())
         
         navigationItem.leftBarButtonItem = logoutButton
     }
     
     func handleLogout() {
         let registrationController = RegistrationController()
-        presentViewController(registrationController, animated: true, completion: nil)
+        present(registrationController, animated: true, completion: nil)
     }
 }
 

@@ -12,64 +12,64 @@ class RegistrationController: UIViewController {
     
     let registrationInputsContainer: UIView = {
         let container = UIView()
-        container.backgroundColor = UIColor.clearColor()
+        container.backgroundColor = UIColor.clear
         container.translatesAutoresizingMaskIntoConstraints = false
         return container
     }()
     
     lazy var registerButton: UIButton = {
-        let button = UIButton(type: .System)
+        let button = UIButton(type: .system)
         button.backgroundColor = Color.baseColor
-        button.setTitle("Register", forState: .Normal)
-        button.setTitleColor(UIColor.whiteColor(), forState: .Normal)
-        button.titleLabel?.font = UIFont(name: "FiraSans-Medium", size: 13) ?? UIFont.boldSystemFontOfSize(13)
+        button.setTitle("Register", for: UIControlState())
+        button.setTitleColor(UIColor.white, for: UIControlState())
+        button.titleLabel?.font = UIFont(name: "FiraSans-Medium", size: 13) ?? UIFont.boldSystemFont(ofSize: 13)
         button.layer.cornerRadius = 3
         button.layer.masksToBounds = true
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.addTarget(self, action: #selector(registerButtonWasClicked), forControlEvents: .TouchUpInside)
+        button.addTarget(self, action: #selector(registerButtonWasClicked), for: .touchUpInside)
         return button
     }()
     
     let loginInputsContainer: UIView = {
         let container = UIView()
-        container.backgroundColor = UIColor.clearColor()
+        container.backgroundColor = UIColor.clear
         container.translatesAutoresizingMaskIntoConstraints = false
         return container
     }()
     
     lazy var loginButton: UIButton = {
-        let button = UIButton(type: .System)
+        let button = UIButton(type: .system)
         button.backgroundColor = Color.baseColor
-        button.setTitle("Sign In", forState: .Normal)
-        button.setTitleColor(UIColor.whiteColor(), forState: .Normal)
-        button.titleLabel?.font = UIFont(name: "FiraSans-Medium", size: 13) ?? UIFont.boldSystemFontOfSize(13)
+        button.setTitle("Sign In", for: UIControlState())
+        button.setTitleColor(UIColor.white, for: UIControlState())
+        button.titleLabel?.font = UIFont(name: "FiraSans-Medium", size: 13) ?? UIFont.boldSystemFont(ofSize: 13)
         button.layer.cornerRadius = 3
         button.layer.masksToBounds = true
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.addTarget(self, action: #selector(loginButtonWasClicked), forControlEvents: .TouchUpInside)
+        button.addTarget(self, action: #selector(loginButtonWasClicked), for: .touchUpInside)
         return button
     }()
     
     let forgotPasswordButton: UIButton = {
-        let button = UIButton(type: .System)
-        button.backgroundColor = .clearColor()
-        button.setTitle("Forgot Password?", forState: .Normal)
-        button.setTitleColor(Color.wildSand, forState: .Normal)
-        button.titleLabel?.font = UIFont(name: "FiraSans-Regular", size: 12) ?? UIFont.boldSystemFontOfSize(12)
+        let button = UIButton(type: .system)
+        button.backgroundColor = .clear
+        button.setTitle("Forgot Password?", for: UIControlState())
+        button.setTitleColor(Color.wildSand, for: UIControlState())
+        button.titleLabel?.font = UIFont(name: "FiraSans-Regular", size: 12) ?? UIFont.boldSystemFont(ofSize: 12)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.sizeToFit()
         return button
     }()
     
     lazy var registerLabel: UIButton = {
-        let button = UIButton(type: .System)
-        button.backgroundColor = .clearColor()
-        button.setTitle("Register", forState: .Normal)
-        button.setTitleColor(Color.mediumGray, forState: .Normal)
-        button.titleLabel?.font = UIFont(name: "FiraSans-Regular", size: 13) ?? UIFont.boldSystemFontOfSize(13)
+        let button = UIButton(type: .system)
+        button.backgroundColor = .clear
+        button.setTitle("Register", for: UIControlState())
+        button.setTitleColor(Color.mediumGray, for: UIControlState())
+        button.titleLabel?.font = UIFont(name: "FiraSans-Regular", size: 13) ?? UIFont.boldSystemFont(ofSize: 13)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.sizeToFit()
-        button.addTarget(self, action: #selector(registerLabelWasClicked), forControlEvents: .TouchUpInside)
+        button.addTarget(self, action: #selector(registerLabelWasClicked), for: .touchUpInside)
         return button
     }()
     
@@ -81,14 +81,14 @@ class RegistrationController: UIViewController {
     }()
     
     lazy var loginLabel: UIButton = {
-        let button = UIButton(type: .System)
-        button.backgroundColor = .clearColor()
-        button.setTitle("Sign In", forState: .Normal)
-        button.setTitleColor(Color.wildSand, forState: .Normal)
-        button.titleLabel?.font = UIFont(name: "FiraSans-Regular", size: 13) ?? UIFont.boldSystemFontOfSize(13)
+        let button = UIButton(type: .system)
+        button.backgroundColor = .clear
+        button.setTitle("Sign In", for: UIControlState())
+        button.setTitleColor(Color.wildSand, for: UIControlState())
+        button.titleLabel?.font = UIFont(name: "FiraSans-Regular", size: 13) ?? UIFont.boldSystemFont(ofSize: 13)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.sizeToFit()
-        button.addTarget(self, action: #selector(loginLabelWasClicked), forControlEvents: .TouchUpInside)
+        button.addTarget(self, action: #selector(loginLabelWasClicked), for: .touchUpInside)
         return button
     }()
     
@@ -97,7 +97,7 @@ class RegistrationController: UIViewController {
         textfield.translatesAutoresizingMaskIntoConstraints = false
         textfield.attributedPlaceholder = NSAttributedString(string: "Email Address", attributes: [NSForegroundColorAttributeName : Color.mediumGray])
         textfield.textColor = Color.wildSand
-        textfield.font = UIFont(name: "FiraSans-Regular", size: 12) ?? UIFont.boldSystemFontOfSize(12)
+        textfield.font = UIFont(name: "FiraSans-Regular", size: 12) ?? UIFont.boldSystemFont(ofSize: 12)
         return textfield
     }()
     
@@ -110,19 +110,19 @@ class RegistrationController: UIViewController {
     
     let loginEmailIconImageView: UIImageView = {
         let imageview = UIImageView()
-        imageview.image = UIImage(named: "email-icon")?.imageWithRenderingMode(.AlwaysTemplate)
+        imageview.image = UIImage(named: "email-icon")?.withRenderingMode(.alwaysTemplate)
         imageview.tintColor = Color.mediumGray
         imageview.translatesAutoresizingMaskIntoConstraints = false
-        imageview.contentMode = .ScaleAspectFill
+        imageview.contentMode = .scaleAspectFill
         return imageview
     }()
     
     let loginPasswordIconImageView: UIImageView = {
         let imageview = UIImageView()
-        imageview.image = UIImage(named: "password-icon")?.imageWithRenderingMode(.AlwaysTemplate)
+        imageview.image = UIImage(named: "password-icon")?.withRenderingMode(.alwaysTemplate)
         imageview.tintColor = Color.mediumGray
         imageview.translatesAutoresizingMaskIntoConstraints = false
-        imageview.contentMode = .ScaleAspectFill
+        imageview.contentMode = .scaleAspectFill
         return imageview
     }()
     
@@ -131,8 +131,8 @@ class RegistrationController: UIViewController {
         textfield.translatesAutoresizingMaskIntoConstraints = false
         textfield.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSForegroundColorAttributeName : Color.mediumGray])
         textfield.textColor = Color.wildSand
-        textfield.font = UIFont(name: "FiraSans-Regular", size: 12) ?? UIFont.boldSystemFontOfSize(12)
-        textfield.secureTextEntry = true
+        textfield.font = UIFont(name: "FiraSans-Regular", size: 12) ?? UIFont.boldSystemFont(ofSize: 12)
+        textfield.isSecureTextEntry = true
         return textfield
     }()
     
@@ -141,7 +141,7 @@ class RegistrationController: UIViewController {
         textfield.translatesAutoresizingMaskIntoConstraints = false
         textfield.attributedPlaceholder = NSAttributedString(string: "Name", attributes: [NSForegroundColorAttributeName : Color.mediumGray])
         textfield.textColor = Color.wildSand
-        textfield.font = UIFont(name: "FiraSans-Regular", size: 12) ?? UIFont.boldSystemFontOfSize(12)
+        textfield.font = UIFont(name: "FiraSans-Regular", size: 12) ?? UIFont.boldSystemFont(ofSize: 12)
         return textfield
     }()
     
@@ -150,7 +150,7 @@ class RegistrationController: UIViewController {
         textfield.translatesAutoresizingMaskIntoConstraints = false
         textfield.attributedPlaceholder = NSAttributedString(string: "Email Address", attributes: [NSForegroundColorAttributeName : Color.mediumGray])
         textfield.textColor = Color.wildSand
-        textfield.font = UIFont(name: "FiraSans-Regular", size: 12) ?? UIFont.boldSystemFontOfSize(12)
+        textfield.font = UIFont(name: "FiraSans-Regular", size: 12) ?? UIFont.boldSystemFont(ofSize: 12)
         return textfield
     }()
     
@@ -159,8 +159,8 @@ class RegistrationController: UIViewController {
         textfield.translatesAutoresizingMaskIntoConstraints = false
         textfield.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSForegroundColorAttributeName : Color.mediumGray])
         textfield.textColor = Color.wildSand
-        textfield.font = UIFont(name: "FiraSans-Regular", size: 12) ?? UIFont.boldSystemFontOfSize(12)
-        textfield.secureTextEntry = true
+        textfield.font = UIFont(name: "FiraSans-Regular", size: 12) ?? UIFont.boldSystemFont(ofSize: 12)
+        textfield.isSecureTextEntry = true
         return textfield
     }()
     
@@ -180,28 +180,28 @@ class RegistrationController: UIViewController {
     
     let registerNameIconImageView: UIImageView = {
         let imageview = UIImageView()
-        imageview.image = UIImage(named: "name-icon")?.imageWithRenderingMode(.AlwaysTemplate)
+        imageview.image = UIImage(named: "name-icon")?.withRenderingMode(.alwaysTemplate)
         imageview.tintColor = Color.mediumGray
         imageview.translatesAutoresizingMaskIntoConstraints = false
-        imageview.contentMode = .ScaleAspectFill
+        imageview.contentMode = .scaleAspectFill
         return imageview
     }()
     
     let registerEmailIconImageView: UIImageView = {
         let imageview = UIImageView()
-        imageview.image = UIImage(named: "email-icon")?.imageWithRenderingMode(.AlwaysTemplate)
+        imageview.image = UIImage(named: "email-icon")?.withRenderingMode(.alwaysTemplate)
         imageview.tintColor = Color.mediumGray
         imageview.translatesAutoresizingMaskIntoConstraints = false
-        imageview.contentMode = .ScaleAspectFill
+        imageview.contentMode = .scaleAspectFill
         return imageview
     }()
     
     let registerPasswordIconImageView: UIImageView = {
         let imageview = UIImageView()
-        imageview.image = UIImage(named: "password-icon")?.imageWithRenderingMode(.AlwaysTemplate)
+        imageview.image = UIImage(named: "password-icon")?.withRenderingMode(.alwaysTemplate)
         imageview.tintColor = Color.mediumGray
         imageview.translatesAutoresizingMaskIntoConstraints = false
-        imageview.contentMode = .ScaleAspectFill
+        imageview.contentMode = .scaleAspectFill
         return imageview
     }()
     
@@ -222,16 +222,16 @@ class RegistrationController: UIViewController {
         heading.translatesAutoresizingMaskIntoConstraints = false
         heading.textColor = Color.wildSand
         heading.text = "Babbel"
-        heading.textAlignment = .Center
-        heading.font = UIFont(name: "FiraSans-Light", size: 25) ?? UIFont.boldSystemFontOfSize(25)
+        heading.textAlignment = .center
+        heading.font = UIFont(name: "FiraSans-Light", size: 25) ?? UIFont.boldSystemFont(ofSize: 25)
         heading.sizeToFit()
         return heading
     }()
     
     var activeSectionHighLightLeftConstraint: NSLayoutConstraint?
     
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return .LightContent
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return .lightContent
     }
     
     override func viewDidLoad() {
